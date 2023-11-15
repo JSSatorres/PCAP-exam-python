@@ -49,6 +49,8 @@ print(my_dog.__dict__)
 #{'_Dog__name': 'pepe', 'age': '0'}  
 #   Se ve la privada _Nombreclase__nombrepropiedad
 
+
+
 #  counter es una variable de la clase no una variable de la instancia
 #  name es una variable de la instancia
 class Dog():
@@ -57,3 +59,32 @@ class Dog():
         self.name = name
         self.age = age
         Dog.counter += 1
+        
+# my_dog = Dog("pepe","0")        
+print(Dog.__dict__)
+#   Se puede hacer con la clase para ver lo que hay dentro
+#   {'__module__': '__main__', 'counter': 0, '__init__': <function Dog.__init__ at 0x0000014CAA422AC0>, '__dict__': <attribute '__dict__' of 'Dog' objects>, '__weakref__': <attribute '__weakref__' of 'Dog' objects>, '__doc__': None}
+
+
+class House():
+    counter = 0
+    def __init__(self, address, area, price):
+        self.address = address
+        self.area = area
+        self.price = price
+        House.counter += 1
+        
+        House.quality = 'low'
+        self.quality = 'medium'
+        quality = 'high'
+        
+        print(House.quality, self.quality, quality)
+    
+    def present(self):
+        print('The house at', self.address, 'has an area of', self.area, 'and costs', self.price)
+
+soho_house = House('12 Lexington St, Soho', 130, 540000)
+soho_house.present()
+print(House.counter)
+
+# aqui qulity solo se puede acceder en el constructor es una variable local
