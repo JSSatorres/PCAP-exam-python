@@ -88,3 +88,14 @@ soho_house.present()
 print(House.counter)
 
 # aqui qulity solo se puede acceder en el constructor es una variable local
+
+class Vehicle:
+    def __init__(self, speed):
+        self.speed = speed
+        
+        
+
+class LandVehicle(Vehicle):
+    def __init__(self, speed, wheel_count):
+        super().__init__(speed)
+        self.wheel_count = wheel_count
