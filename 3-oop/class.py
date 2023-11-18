@@ -99,3 +99,16 @@ class LandVehicle(Vehicle):
     def __init__(self, speed, wheel_count):
         super().__init__(speed)
         self.wheel_count = wheel_count
+        
+        
+first_str = 'hello'
+second_str = 'hell'
+second_str += 'o'
+print(first_str is second_str)  # False
+print(first_str == second_str) # True
+
+# no es igual con el operador is por que second tendra dos referencias de memoria
+# una "hell" otra "o"
+# pero el == compara que hayalo mismo 
+
+
