@@ -56,3 +56,15 @@ class HumanPlayer(Player):
             if user_choice in ['r', 'p', 's']:
                 return user_choice
 
+class ComputerPlayer(Player):
+    def choose(self):
+        return choice(['r', 'p', 's'])
+
+if __name__ == '__main__':
+    print('--- Rock Paper Scissors Game ---')
+    while True:
+        round_count = input('How many rounds would you like to play? ')
+        if round_count.isnumeric():
+            Game(int(round_count)).play()
+            break
+        
