@@ -111,15 +111,3 @@ print(first_str == second_str) # True
 # una "hell" otra "o"
 # pero el == compara que hayalo mismo 
 
-
-class LandVehicle2(Vehicle):
-    def __init__(self, speed, wheel_count):
-        super().__init__(speed)
-        self.wheel_count = wheel_count
-        
-        
-first_str = 'hello'
-second_str = 'hell'
-second_str += 'o'
-print(first_str is second_str)  # False
-print(first_str == second_str) # True
