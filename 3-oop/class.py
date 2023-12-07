@@ -96,7 +96,7 @@ class Vehicle:
    
 class Vehicle:
     def __init__(self, speed):
-        self.speed = speed
+
              
 
 class LandVehicle(Vehicle):
