@@ -94,10 +94,6 @@ class Vehicle:
         self.speed = speed
         
    
-class Vehicle:
-    def __init__(self, speed):
-
-             
 
 class LandVehicle(Vehicle):
     def __init__(self, speed, wheel_count):
