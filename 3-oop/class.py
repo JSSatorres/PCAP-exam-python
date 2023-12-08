@@ -109,5 +109,5 @@ print(first_str == second_str) # True
 
 # no es igual con el operador is por que second tendra dos referencias de memoria
 # una "hell" otra "o"
-# pero el == compara que hayalo mismo 
+# pero el == compara que haya lo mismo 
 
